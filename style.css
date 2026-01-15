@@ -1,0 +1,132 @@
+:root {
+    --primary-green: #00ff41;
+    --dark-bg: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.05);
+    --dark-red:#8e0000;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background-color: var(--dark-bg); 
+    color: #fff; 
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Matrix Arka Planı */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+
+/* Hero */
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero h1 { font-family: 'Fira Code', monospace; font-size: 4rem; color: var(--primary-green); text-shadow: 0 0 15px var(--primary-green); }
+.subtitle { font-size: 1.5rem; letter-spacing: 5px; opacity: 0.8; }
+
+/* Hakkımda Box */
+.about-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: left;
+}
+.about-card h2 { color: var(--primary-green); margin-bottom: 20px; }
+
+/* Kayan Projeler (Orta Kısım) */
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+.slider-track {
+    display: flex;
+    width: calc(300px * 6);
+    animation: scroll 15s linear infinite;
+}
+.project-box {
+    width: 280px;
+    height: 180px;
+    background: #151515;
+    margin: 0 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-green);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 3)); }
+}
+
+/* Yol Haritası (Estetik Path) */
+.path-container {
+    position: relative;
+    padding-left: 50px;
+    border-left: 2px dashed var(--primary-green);
+    text-align: left;
+}
+.path-step {
+    position: relative;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: var(--glass);
+    border-radius: 10px;
+}
+.step-icon {
+    position: absolute;
+    left: -72px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-green);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* CV Section */
+.cv-box { text-align: center; }
+.cv-img {
+    /* Gerçek A4 piksel karşılığı (96 DPI standartlarında) */
+    width: 794px; 
+    height: 1123px;
+    
+    /* Sayfaya sığması için responsive ayar */
+    max-width: 100%; 
+    height: auto; 
+    
+    /* Oranı korumak için yeni nesil CSS özelliği */
+    aspect-ratio: 210 / 297; 
+    
+    border: 2px solid var(--primary-green);
+    background: #fff; /* Fotoğraf yüklenmezse beyaz görünsün */
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Daha profesyonel derinlik */
+}
+.cv-btn { 
+    display: inline-block; padding: 12px 30px; 
+    border: 2px solid var(--dark-red); 
+    color: var(--dark-red); text-decoration: none; 
+    transition: 0.3s;
+}
+.cv-btn:hover { background: var(--primary-green); color: #000; }
+
+/* End Bar */
+.end-bar { padding: 30px; background: #050505; border-top: 1px solid #222; text-align: center; font-size: 0.9rem; }
