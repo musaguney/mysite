@@ -1,75 +1,224 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musa Güney | Portfolio</title>
+    <title>Musa Güney | Senior Systems Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <canvas id="matrixCanvas"></canvas>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">MUSA<span>GÜNEY</span></a>
+            
+            <div class="nav-right" id="nav-menu">
+                <div class="nav-links">
+                    <a href="#projects" data-lang="nav_projects" class="nav-link">Projeler</a>
+                    <a href="#about" data-lang="nav_about" class="nav-link">Hakkımda</a>
+                    <a href="#tec" data-lang="nav_skills" class="nav-link">Teknolojiler</a>
+                    <a href="#contact" data-lang="nav_contact" class="nav-link">İletişim</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+                    <button id="lang-toggle" aria-label="Toggle Language">EN</button>
+                    <a href="/cv-musa-guney.PDF" class="btn-cv" download>
+                        <i class="fas fa-download"></i> <span data-lang="nav_cv">CV</span>
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>I am Musa Güney</h1>
-            <p class="subtitle">Software Engineering</p>
+    <header class="hero container">
+        <div class="hero-image">
+           <div class="image-wrapper">
+               <img src="/picture2.png" alt="Musa Güney Portrait" style="width: 80%; height: auto;"> 
+           </div>
+       </div>
+       
+       <div class="code-editor-window">
+           <div class="editor-header">
+               <div class="window-controls">
+                   <span class="control-dot close"></span>
+                   <span class="control-dot minimize"></span>
+                   <span class="control-dot expand"></span>
+               </div>
+               <div class="editor-tabs">
+                   <div class="tab active">
+                       <i class="fab fa-js-square"></i> developer.js
+                   </div>
+                   <div class="tab">
+                       <i class="fab fa-css3-alt"></i> style.css
+                   </div>
+               </div>
+           </div>
+           
+           <div class="editor-body">
+               <div class="line-numbers">
+                   <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+               </div>
+               <div class="code-content">
+                   <div><span class="keyword">const</span> <span class="variable">developer</span> = {</div>
+                   <div class="indent">name: <span class="string">'[MUSA GÜNEY]'</span>,</div>
+                   <div class="indent">role: <span class="string">'Full Stack Engineer'</span>,</div>
+                   <div class="indent">focus: [<span class="string">'Performance'</span>, <span class="string">'Security'</span>],</div>
+                   <div class="indent">vision: <span class="string">'Engineering Elegance'</span>,</div>
+                   <div>};</div>
+                   <div class="empty-line"></div>
+                   <div><span class="keyword">function</span> <span class="function">buildFuture</span>() {</div>
+                   <div class="indent"><span class="keyword">return</span> <span class="variable">developer</span>.<span class="function">solveComplexProblems</span>();</div>
+                   <div>}</div>
+               </div>
+           </div>
+       </div>
+       
+   </header>
+
+    <section id="tec" class="section-padding reveal">
+        <div class="container">
+            <h2 class="section-label" data-lang="skills_title">03 // Teknoloji Yığını</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3 data-lang="skill_cat_backend">Backend & Core</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="devicon-django-plain"></i> Django</span>
+                        <span class="tech-tag">C#</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3 data-lang="skill_cat_frontend">Frontend & Web</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3 data-lang="skill_cat_mobile">Mobile & Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tech-tag"><i class="fa-brands fa-flutter"></i> Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag"><i class="fas fa-cloud"></i> Firebase</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section class="about container">
-        <div class="about-card">
-            <h2>Hakkımda</h2>
-            <div class="about-text">
-                <p>Yazılım dünyasına olan tutkum, karmaşık problemleri zarif çözümlere dönüştürme isteğimle başladı. <strong>Software Engineering</strong> öğrencisi olarak, sadece kod yazmayı değil, sürdürülebilir ve ölçeklenebilir sistemler inşa etmeyi hedefliyorum.</p>
-                <p>Sürekli öğrenen, teknolojik trendleri takip eden ve projelerinde performansı ön planda tutan bir geliştiriciyim. Şu anda full-stack geliştirme ve sistem mimarileri üzerine yoğunlaşıyorum.</p>
+    <section id="projects" class="section-padding reveal">
+        <div class="container">
+            <h2 class="section-label" data-lang="proj_title">01 // Seçilmiş Çalışmalar</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="/proje1.png" alt="B2B Website">
+                        <div class="card-overlay"><a href="https://www.kiliccivata.com/" class="btn-view"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="project-title">B2B E-Commerce Website</h3>
+                        <p class="project-desc" data-lang="proj_1_desc">Python ve Django teknolojileri kullanılarak Kılıç Cıvata markası için özel bir web uygulaması geliştirilmiştir. Projenin veri tabanı mimarisi SQLite üzerine kurulmuş olup, hızlı veri akışı hedeflenmiştir. Kullanıcı arayüzü JavaScript ve özelleştirilmiş CSS ile zenginleştirilerek, mobil uyumlu ve interaktif bir deneyim sunulmuştur. Bu çalışma, full-stack geliştirme yetkinliklerimi sergileyen güncel bir projedir.</p>
+                        <div class="tech-stack"><span>Python</span><span>Django</span><span>Sqlite</span><span>JavaScript & Css</span></div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="/proje2.jpeg" alt="Early Quarke">
+                        <div class="card-overlay"><a href="https://agl-sismikuyari.com.tr/nasil-calisir.asp" class="btn-view"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="project-title">Early Warning App</h3>
+                        <p class="project-desc" data-lang="proj_2_desc">Flutter kullanarak multi platformlu bir Erken Uyarı Sistemi mobil uygulaması geliştirdim. Gerçek zamanlı veri senkronizasyonu ve anlık bildirimler için Firebase altyapısını entegre ettim. Sistemin karmaşık risk hesaplamalarını ve veri işleme mantığını, sunucu tarafında Next.js tabanlı bir API servisi kurarak optimize ettim. "Kaynak kod firma anlaşmasından dolayı paylaşılmamıştır."</p>
+                        <div class="tech-stack"><span>Flutter</span><span>Dart</span><span>Firebase</span><span>Next.js</span></div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="/proje3.png" alt="Logistics AI">
+                        <div class="card-overlay"><a href="https://github.com/musaguney/Gezi_Uyg" class="btn-view"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="project-title">Travel Guide App</h3>
+                        <p class="project-desc" data-lang="proj_3_desc">Seyahatseverler için gezilecek yerleri bulma ve deneyim paylaşımı odaklı bir mobil platform tasarladım. Flutter ile modern ve akıcı bir arayüz geliştirirken, arka planda güvenli oturum açma ve kullanışlı bir kullanıcı deneyimi sundum.</p>
+                        <div class="tech-stack"><span>Flutter</span><span>Dart</span><span>SqLite</span></div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="/proje4.png" alt="Optik Reader">
+                        <div class="card-overlay"><a href="https://github.com/musaguney/optik-okuyucu/tree/main" class="btn-view"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="project-title">Optical Form Reader Desktop App</h3>
+                        <p class="project-desc" data-lang="proj_4_desc">Python ve görüntü işleme kütüphaneleri (OpenCV) kullanılarak, optik form fotoğraflarını analiz eden bir OMR (Optik İşaret Tanıma) masaüstü uygulaması geliştirildi. Algoritma, işaretlenen cevapları tespit edip otomatik puanlama yapmakta ve sonuçları (Öğrenci No, Puan) yapılandırılmış CSV formatında raporlamaktadır.</p>
+                        <div class="tech-stack"><span>Flutter</span><span>Dart</span><span>SqLite</span></div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="/proje5.png" alt="Logistics AI">
+                        <div class="card-overlay"><a href="https://github.com/musaguney/Gezi_Uyg" class="btn-view"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="project-title">UzakPC Website</h3>
+                        <p class="project-desc" data-lang="proj_5_desc">Python ve SQLite kullanılarak, uzaktaki Pardus sistemlere IP ve kullanıcı bilgileriyle erişim sağlayan web tabanlı bir izleme (monitoring) paneli geliştirildi. Uygulama, uzaktaki cihazdan anlık sistem kaynaklarını (CPU, RAM, Disk) ve donanım özelliklerini çekerek web arayüzünde görselleştirmektedir.</p>
+                        <div class="tech-stack"><span>Flutter</span><span>Dart</span><span>SqLite</span></div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="projects-section">
-        <h2 class="section-title">Projelerim</h2>
-        <div class="slider-container">
-            <div class="slider-track">
-                <div class="project-box"><h3>E-Ticaret Paneli</h3><p>React & Firebase</p></div>
-                <div class="project-box"><h3>Mobil Uygulama</h3><p>Flutter</p></div>
-                <div class="project-box"><h3>AI Chatbot</h3><p>Python & OpenAI</p></div>
-                <div class="project-box"><h3>Veri Analizi</h3><p>Pandas & NumPy</p></div>
-                <div class="project-box"><h3>E-Ticaret Paneli</h3><p>React & Firebase</p></div>
-                <div class="project-box"><h3>Mobil Uygulama</h3><p>Flutter</p></div>
+    <section id="about" class="section-padding reveal bg-alt">
+        <div class="container about-container">
+            <h2 class="section-label" data-lang="about_title">02 // Hakkımda</h2>
+            <div class="about-text-box">
+                <p data-lang="about_text_1">
+                    &nbsp;  Web, mobil ve masaüstü platformlarında fikirleri işlevsel ürünlere dönüştürme konusunda tutkuluyum. <strong>Python</strong> ile görüntü işleme algoritmalarından, <strong>Flutter</strong> ile mobil uygulama mimarilerine kadar geniş bir teknoloji yelpazesinde projeler üretiyorum.
+                </p>
+                <br>
+                <p data-lang="about_text_2">
+                   &nbsp; Benim için yazılım geliştirmek sadece kod yazmaktan ibaret değil; her alanda, gerçek dünya problemlerini çözen katma değerli çözümlerdir.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="roadmap container">
-        <h2 class="section-title">Teknoloji Yolculuğum</h2>
-        <div class="path-container">
-            <div class="path-step">
-                <div class="step-icon">1</div>
-                <div class="step-content"><h3>Temeller</h3><p>HTML5, CSS3, Modern JS</p></div>
+    
+    <section id="contact" class="section-padding reveal">
+        <div class="container">
+            <div class="contact-header">
+                <h2 data-lang="contact_headline">Bir sonraki büyük projeyi<br>birlikte başlatalım.</h2>
+                <p data-lang="contact_sub">Aşağıdaki platformlardan bana ulaşabilirsiniz.</p>
             </div>
-            <div class="path-step">
-                <div class="step-icon">2</div>
-                <div class="step-content"><h3>Backend</h3><p>Node.js, Python, SQL</p></div>
-            </div>
-            <div class="path-step">
-                <div class="step-icon">3</div>
-                <div class="step-content"><h3>Frameworks</h3><p>React, Django, Express</p></div>
+            <div class="contact-grid">
+                <a href="mailto:musaguneyofficial@gmail.com" class="contact-card email"><i class="fas fa-envelope"></i><span>Gmail</span></a>
+                <a href="https://www.linkedin.com/in/musa-g%C3%BCney-209140242/" target="_blank" class="contact-card linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/musaguney" target="_blank" class="contact-card github"><i class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="https://www.instagram.com/musa_guney0/" target="_blank" class="contact-card instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
             </div>
         </div>
     </section>
 
-    <section class="cv-section container">
-        <div class="cv-box">
-            <img src="/picture.jpeg" alt="Musa Guney CV" class="cv-img">
-            <h3>My CV</h3>
-            <a href="cv.pdf" download class="cv-btn">CV İndir</a>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Musa Güney. <span data-lang="footer_rights">Tüm hakları saklıdır.</span></p>
         </div>
-    </section>
-
-    <footer class="end-bar">
-        <p>Musa Güney &copy; 2026 | Tüm Hakları Saklıdır.</p>
     </footer>
 
     <script src="script.js"></script>
